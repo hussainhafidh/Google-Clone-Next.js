@@ -72,15 +72,18 @@ const Main: React.FC = () => {
                 width={270}
                 height={100}
             />
-            <form onSubmit={(e) => onSearchSubmit(e)} className="flex border mt-7 px-5 py-2 rounded-full w-2/5 items-center hover:shadow-md">
-                <AiOutlineSearch className="text-xl text-slate-400" />
-                <input 
-                    type="text" 
-                    className="w-full focus:outline-none ml-4" 
-                    value={search || transcript}
-                    onChange={(e) => setSearch(e.target.value)}
-                    placeholder="Search Google"
-                />
+          <form 
+  onSubmit={(e) => onSearchSubmit(e)} 
+  className="flex border mt-7 px-5 py-2 rounded-full w-full sm:w-2/5 items-center hover:shadow-md"
+>
+  <AiOutlineSearch className="text-xl text-slate-400" />
+  <input 
+    type="text" 
+    className="w-full focus:outline-none ml-4" 
+    value={search || transcript}
+    onChange={(e) => setSearch(e.target.value)}
+    placeholder="Search Google"
+  />
                 {
                     listening ? 
                         <BsFillMicFill 
